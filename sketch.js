@@ -69,10 +69,15 @@ function draw() {
   //Engine.update(engine);
   
   textSize(20);
-  fill("lightyellow");
-  text("Drag the polygon to destroy the blocks",300,30);
-  textSize(10);
-  text("Press Space to get a second Chance to Play!!",650 ,350);
+  fill("white");
+  stroke("pink");
+  text("Drag the polygon to destroy the blocks",220,20);
+
+  textSize(20);
+  fill("white");
+  stroke("pink");
+  text("Press Space to get a second Chance to Play!",185 ,60);
+
   ground.display();
   stand1.display();
   stand2.display();
@@ -86,17 +91,17 @@ function draw() {
   block5.display();
   block6.display();
   block7.display();
-  fill("pink");
+  fill("skyblue");
   block8.display();
   block9.display();
   block10.display();
   block11.display();
   block12.display();
-  fill("turquoise");
+  fill("skyblue");
   block13.display();
   block14.display();
   block15.display();
-  fill("grey");
+  fill("skyblue");
   block16.display();
   fill("skyblue");
   blocks1.display();
@@ -104,11 +109,11 @@ function draw() {
   blocks3.display();
   blocks4.display();
   blocks5.display();
-  fill("turquoise");
+  fill("skyblue");
   blocks6.display();
   blocks7.display();
   blocks8.display();
-  fill("pink")
+  fill("skyblue")
   blocks9.display();
   fill("gold");
   imageMode(CENTER)
@@ -125,4 +130,8 @@ function mouseReleased(){
 }
 function keyPressed(){
 //write code for extra chance of the player
+if(keyCode === 32){
+  slingShot.attach(this.polygon);
 }
+}
+
